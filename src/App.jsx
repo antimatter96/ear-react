@@ -36,7 +36,11 @@ export default class App extends React.Component {
 
     // }
 
-    if (selectedEntriesArray.length < 1) {
+    if (!selectedEntriesArray || selectedEntriesArray.length < 1) {
+      console.log(`searchFilter empty`)
+      this.setState({
+        list: locationData
+      })
       return
     }
 
