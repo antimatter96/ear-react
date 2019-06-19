@@ -7,18 +7,22 @@
     "build": "neutrino build",
     "start": "neutrino start",
     "lint": "neutrino lint",
-    "test": "neutrino test"
+    "test": "neutrino test",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^3.1.0"
+    "react-hot-loader": "^3.1.0",
+    "react-select": "^3.0.4"
   },
   "devDependencies": {
     "@neutrinojs/jest": "^8.3.0",
     "@neutrinojs/react": "^8.3.0",
     "@neutrinojs/standardjs": "^8.3.0",
+    "gh-pages": "^2.0.1",
     "neutrino": "^8.3.0"
-  }
+  },
+  "homepage": "https://arpit.space/ear-react"
 }
