@@ -36,7 +36,7 @@ export default class App extends React.Component {
 
     // }
 
-    if (!selectedEntriesArray || selectedEntriesArray.length < 1) {
+    if (selectedEntriesArray == null || !selectedEntriesArray || selectedEntriesArray.length < 1) {
       console.log(`searchFilter empty`)
       this.setState({
         list: locationData
@@ -229,6 +229,8 @@ export default class App extends React.Component {
           isMulti
           isSearchable
           onChange={this.handleChange}
+          styles={customStyles}
+          style={{ color: 'red', columnCount: 2, fontSize: '23px' }}
         />
       )
     } else {
@@ -307,6 +309,17 @@ class Listing extends React.Component {
       </div>
     )
   }
+}
+
+const customStyles = {
+  group: (provided, _state) => ({
+    ...provided,
+    columnCount: 2
+  }),
+  groupHeading: (provided, _state) => ({
+    ...provided,
+    fontWeight: 2
+  })
 }
 
 /* App
